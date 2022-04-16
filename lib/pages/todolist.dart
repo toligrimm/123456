@@ -12,20 +12,20 @@ class _TodolistState extends State<Todolist> {
     return showDialog(context: context, barrierDismissible: true, builder: (param){
       return const AlertDialog(
         title: Text('todo'),
-        content: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'jjdj',
-                ),
-              ),
-              TextField(
-
-              )
-            ],
-          ),
-        ),
+        // content: SingleChildScrollView(
+        //   child: Column(
+        //     children: <Widget>[
+        //       TextField(
+        //         decoration: InputDecoration(
+        //           hintText: 'jjdj',
+        //         ),
+        //       ),
+        //       TextField(
+        //
+        //       )
+        //     ],
+        //   ),
+        // ),
       );
     }, );
   }
