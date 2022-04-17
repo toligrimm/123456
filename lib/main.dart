@@ -10,9 +10,9 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'FlutterTodo',
-      home: const MainPage(),
+      home: MainPage(),
       // theme: ThemeData(
       //   primarySwatch: Colors.orange,
       // ),
