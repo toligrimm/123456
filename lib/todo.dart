@@ -1,6 +1,6 @@
-// class Todo {
-//   Todo({required this.title, this.isDone = false});
-//
-//   String title;
-//   bool isDone;
-// }
+class Todo {
+
+  late String name;
+  late String description;
+
+}
