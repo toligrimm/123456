@@ -1,4 +1,4 @@
-import 'package:dismiss/repos/db_connection.dart';
+import 'package:dismiss/repos/database_connection.dart';
 import 'package:sqflite/sqflite.dart';
 
 
@@ -14,8 +14,7 @@ class Repository{
 
   Future<Database> get database async{
     if(_database!=null) return _database;
-    _database = await _databaseConnection.setDatabase(
-    );
+    _database = await _databaseConnection.setDatabase();
     return _database;
   }
 

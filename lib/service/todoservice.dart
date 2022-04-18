@@ -1,4 +1,4 @@
-import 'package:dismiss/repos/repo.dart';
+import 'package:dismiss/repos/repository.dart';
 import '../todo.dart';
 
 class TodoService{
