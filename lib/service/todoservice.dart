@@ -1,5 +1,4 @@
 import 'package:dismiss/repos/repo.dart';
-
 import '../todo.dart';
 
 class TodoService{
@@ -7,10 +6,10 @@ class TodoService{
 
   TodoService(){
     _repository = Repository();
-    
+
   }
   saveTodo(Todo todo) async{
-   return await _repository.insertData('todolists', data)
+   return await _repository.insertData('todolists', todo.todoMap());
 
   }
 }

@@ -1,6 +1,7 @@
 import 'package:dismiss/service/todoservice.dart';
 import 'package:flutter/material.dart';
 
+
 import '../todo.dart';
 
 class Todolist extends StatefulWidget {
@@ -47,10 +48,12 @@ class _TodolistState extends State<Todolist> {
           actions: <Widget>[
             TextButton(
               child: const Text('Добавить'),
-              onPressed: () {
+              onPressed: () async {
                 _todo.name = _todoNameController.text;
                 _todo.description = _todoDescriptionController.text;
                 _todoService.saveTodo(_todo);
+                var result = await _todoService.saveTodo(_todo);
+                print(result);
               },
             ),
             TextButton(
