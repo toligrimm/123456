@@ -8,26 +8,32 @@ class Todolist extends StatefulWidget {
 }
 
 class _TodolistState extends State<Todolist> {
-  _showFormDialog(BuildContext context){
-    return showDialog(context: context, barrierDismissible: true, builder: (param){
-      return const AlertDialog(
-        title: Text('todo'),
-        // content: SingleChildScrollView(
-        //   child: Column(
-        //     children: <Widget>[
-        //       TextField(
-        //         decoration: InputDecoration(
-        //           hintText: 'jjdj',
-        //         ),
-        //       ),
-        //       TextField(
-        //
-        //       )
-        //     ],
-        //   ),
-        // ),
-      );
-    }, );
+  Future<void> _showFormDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('AlertDialog Title'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: const <Widget>[
+                Text('This is a demo alert dialog.'),
+                Text('Would you like to approve of this message?'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Approve'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
